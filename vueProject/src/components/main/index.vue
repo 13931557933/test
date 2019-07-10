@@ -17,9 +17,9 @@
       <img src="../../assets/中国国旗.png" />
     </div>
     <div class="content">
-      <div>
+      <div class="left">
         <div class="kaijiangjilu">
-          <span>开奖记录</span>
+          <span style="color:#fff">开奖记录</span>
           <el-table
             :data="tableData"
             style="width: 100%;margin-top:30px;"
@@ -33,30 +33,84 @@
           </el-table>
         </div>
         <div class="zhankuang">
-            <span>战况</span>
-
+          <span style="color:#fff">战况</span>
         </div>
       </div>
       <div class="zu2">
+        <el-table
+          :data="tableData"
+          style="width: 100%"
+          :row-style="tableRowStyle"
+          :header-cell-style="tableRowStyle"
+        >
+          <el-table-column prop="num1" label="区块" align="center"></el-table-column>
+          <el-table-column prop="num2" label="号码" align="center"></el-table-column>
+          <el-table-column prop="time" label="时间" align="center"></el-table-column>
+        </el-table>
+      </div>
+      <div class="haomaqu">
+        <div>
+          <div class="jiangchi">
+            <span>奖池</span>
+            <span>0</span>
+          </div>
+          <div class="touzhuxiane">
+            <span>投注限额</span>
+            <span>0/0</span>
+          </div>
+          <span class="baifenbi">0%</span>
+          <span class="txtTouZhu">投注组合</span>
+        </div>
+        <div class="keys"></div>
+        <div class="touzhuzuhe">
+          <div class="touzhu_1"></div>
+          <div class="touzhu_2"></div>
+          <div class="touzhu_3"></div>
+        </div>
+        <div style="float:left">
+          <div class="touzhujine"></div>
+          <el-button class="btnTouZhu">投注</el-button>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="touzhuzhibo">
+          <span style="color:#fff">投注直播</span>
           <el-table
             :data="tableData"
+            style="width: 100%;margin-top:30px;"
+            max-height="250"
+            :show-header="false"
+            :row-style="tableRowStyle"
+          >
+            <el-table-column prop="num1" align="center"></el-table-column>
+            <el-table-column prop="num2" align="center"></el-table-column>
+            <el-table-column prop="time" align="center"></el-table-column>
+          </el-table>
+        </div>
+        <div class="zu3">
+          <el-table
+            :data="tableData1"
             style="width: 100%"
             :row-style="tableRowStyle"
             :header-cell-style="tableRowStyle"
           >
-            <el-table-column prop="num1" label="区块" align="center"></el-table-column>
-            <el-table-column prop="num2" label="号码" align="center"></el-table-column>
             <el-table-column prop="time" label="时间" align="center"></el-table-column>
+            <el-table-column prop="num1" label="期号" align="center"></el-table-column>
+            <el-table-column prop="num2" label="开奖号码" align="center"></el-table-column>
+            <el-table-column prop="money" label="金额" align="center"></el-table-column>
           </el-table>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import style from "../../../static/css/main.css";
 export default {
   data() {
     return {
+      style,
       language: "中文",
       tableData: [
         {
@@ -78,13 +132,9 @@ export default {
           num1: "46524767",
           num2: "123",
           time: "12:00"
-        },
-        {
-          num1: "46524767",
-          num2: "123",
-          time: "12:00"
         }
-      ]
+      ],
+      tableData1: []
     };
   },
   methods: {
@@ -97,90 +147,10 @@ export default {
     },
     tableRowStyle({ row, rowIndex }) {
       return "background-color: rgb(33, 37, 39);";
-    },
+    }
   }
 };
 </script>
 
 <style>
-.header {
-  background: #000;
-  color: #fff;
-  height: 50px;
-  line-height: 50px;
-}
-.header img:first-child {
-  width: 150px;
-  position: relative;
-  top: -7px;
-  margin-right: 30px;
-  margin-left: 120px;
-}
-.header img:nth-child(5) {
-  width: 30px;
-  float: right;
-  margin-right: 5px;
-  margin-top: 10px;
-}
-.login {
-  float: right;
-  margin-right: 20px;
-  height: 30px;
-  line-height: 6px;
-  margin-top: 10px;
-  background: #0dbdbd;
-  border: 0;
-  color: #fff;
-}
-.drop {
-  float: right;
-  margin-right: 20px;
-}
-.el-button:active,
-.el-button:hover {
-  border: 0;
-  color: #fff;
-  background: #0dbdbd;
-}
-.content {
-  background-color: rgb(25, 29, 31);
-  height: 1340px;
-  padding-top: 50px;
-}
-.content div:first-child {
-  float: left;
-}
-.kaijiangjilu {
-  box-sizing: border-box;
-  width: 513px;
-  height: 340px;
-  background-color: rgb(33, 37, 39);
-  margin-left: 330px;
-  padding: 24px 23px;
-}
-.el-table td {
-  border-bottom: none !important;
-  text-align: center;
-}
-.zu2 {
-  float: left;
-  box-sizing: border-box;
-  padding: 24px 30px;
-  width: 770px;
-  height: 616px;
-  margin-left: 40px;
-  background-color: rgb(33, 37, 39);
-}
-.zhankuang {
-  box-sizing: border-box;
-  width: 515px;
-  height: 266px;
-  margin-left: 330px;
-  margin-top: 350px;
-  padding: 24px 23px;
-  background-color: rgb(33, 37, 39);
-}
-.el-table th.is-leaf{
-    border-bottom: none !important;
-}
 </style>
