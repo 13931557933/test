@@ -2,7 +2,8 @@
   <div>
     <div class="header">
       <img src="../../assets/logo_02.gif" />
-      <div style="display:inline;position:relative;bottom:25px;">游戏介绍</div>
+      <div class="youxijieshao">游戏介绍</div>
+      <!-- <span class="youxijieshao">游戏介绍</span> -->
       <el-button class="login">登录</el-button>
       <el-dropdown class="drop" @command="menuTab">
         <span class="el-dropdown-link">
@@ -33,7 +34,15 @@
           </el-table>
         </div>
         <div class="zhankuang">
-          <span style="color:#fff">战况</span>
+          <span>战况</span>
+          <!-- <span>3</span>
+          <span>4</span>
+          <span>1</span> -->
+          <div>
+            <div class="second"></div>
+            <div class="first"></div>
+            <div class="third"></div>
+          </div>
         </div>
       </div>
       <div class="zu2">
