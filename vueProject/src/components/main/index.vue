@@ -18,44 +18,50 @@
       <img src="../../assets/中国国旗.png" />
     </div>
     <div class="content">
-      <div class="left">
-        <div class="kaijiangjilu">
-          <span style="color:#fff">开奖记录</span>
-          <el-table
-            :data="tableData"
-            style="width: 100%;margin-top:30px;"
-            max-height="250"
-            :show-header="false"
-            :row-style="tableRowStyle"
-          >
-            <el-table-column prop="num1" align="center"></el-table-column>
-            <el-table-column prop="num2" align="center"></el-table-column>
-            <el-table-column prop="time" align="center"></el-table-column>
-          </el-table>
-        </div>
-        <div class="zhankuang">
-          <span>战况</span>
-          <!-- <span>3</span>
+      <div style="
+        overflow: hidden;
+        width: 88%;
+        margin: 0 auto;">
+        <div class="left">
+          <div class="kaijiangjilu">
+            <span style="color:#fff">开奖记录</span>
+            <el-table
+              class="kaijiangTable"
+              :data="tableData"
+              style="width: 100%;margin-top:30px;"
+              max-height="250"
+              :show-header="false"
+              :row-style="tableRowStyle"
+            >
+              <el-table-column prop="num1" align="center"></el-table-column>
+              <el-table-column prop="num2" align="center"></el-table-column>
+              <el-table-column prop="time" align="center"></el-table-column>
+            </el-table>
+          </div>
+          <div class="zhankuang">
+            <span>战况</span>
+            <!-- <span>3</span>
           <span>4</span>
-          <span>1</span> -->
-          <div>
-            <div class="second"></div>
-            <div class="first"></div>
-            <div class="third"></div>
+            <span>1</span>-->
+            <div>
+              <div class="second"></div>
+              <div class="first"></div>
+              <div class="third"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="zu2">
-        <el-table
-          :data="tableData"
-          style="width: 100%"
-          :row-style="tableRowStyle"
-          :header-cell-style="tableRowStyle"
-        >
-          <el-table-column prop="num1" label="区块" align="center"></el-table-column>
-          <el-table-column prop="num2" label="号码" align="center"></el-table-column>
-          <el-table-column prop="time" label="时间" align="center"></el-table-column>
-        </el-table>
+        <div class="zu2">
+          <el-table
+            :data="tableData"
+            style="width: 100%"
+            :row-style="tableRowStyle"
+            :header-cell-style="tableRowStyle"
+          >
+            <el-table-column prop="num1" label="区块" align="center"></el-table-column>
+            <el-table-column prop="num2" label="号码" align="center"></el-table-column>
+            <el-table-column prop="time" label="时间" align="center"></el-table-column>
+          </el-table>
+        </div>
       </div>
       <div class="haomaqu">
         <div>
