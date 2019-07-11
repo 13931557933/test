@@ -40,13 +40,22 @@
           </div>
           <div class="zhankuang">
             <span>战况</span>
-            <!-- <span>3</span>
-          <span>4</span>
-            <span>1</span>-->
-            <div>
-              <div class="second"></div>
-              <div class="first"></div>
-              <div class="third"></div>
+            <div style="
+              overflow: hidden;
+              width: 100%;
+              height: calc(100% - 20px);">
+              <div class="second">
+                <img src="../../assets/3.png" />
+                <img style="width: 90%;" src="../../assets/2nd.png" />
+              </div>
+              <div class="first">
+                <img src="../../assets/4.png" />
+                <img style="width: 90%;" src="../../assets/1st.png" />
+              </div>
+              <div class="third">
+                <img src="../../assets/1.png" />
+                <img style="width: 90%;" src="../../assets/3rd.png" />
+              </div>
             </div>
           </div>
         </div>
@@ -76,15 +85,27 @@
           <span class="baifenbi">0%</span>
           <span class="txtTouZhu">投注组合</span>
         </div>
-        <div class="keys"></div>
+        <div>
+          <div class="keys">
+          <span class="keys_msg">0号代表10号</span>
+          <ul>
+            <li v-for="(item,index) in images" :key="`${index}`" style="float:left">
+              <img :src="item.src">
+            </li>
+          </ul>
+        </div>
         <div class="touzhuzuhe">
           <div class="touzhu_1"></div>
           <div class="touzhu_2"></div>
           <div class="touzhu_3"></div>
         </div>
-        <div style="float:left">
+        <div style="
+          float: left;
+          width: 22%;
+          margin-left: 20px;">
           <div class="touzhujine"></div>
           <el-button class="btnTouZhu">投注</el-button>
+        </div>
         </div>
       </div>
       <div class="bottom">
@@ -149,7 +170,18 @@ export default {
           time: "12:00"
         }
       ],
-      tableData1: []
+      tableData1: [],
+      images:[
+        {src:'../../assets/k1.png'},
+        {src:'../../assets/k2.png'},
+        {src:'../../assets/k3.png'},
+        {src:'../../assets/k4.png'},
+        {src:'../../assets/k5.png'},
+        {src:'../../assets/k6.png'},
+        {src:'../../assets/k7.png'},
+        {src:'../../assets/k8.png'},
+        {src:'../../assets/k9.png'},
+        {src:'../../assets/k0.png'},]
     };
   },
   methods: {
