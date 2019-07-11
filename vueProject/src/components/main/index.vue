@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="haomaqu">
-        <div>
+        <div style="overflow: hidden;">
           <div class="jiangchi">
             <span>奖池</span>
             <span>0</span>
@@ -86,18 +86,33 @@
           <span class="txtTouZhu">投注组合</span>
         </div>
         <div>
-          <div class="keys">
-          <span class="keys_msg">0号代表10号</span>
+          <div class="keyboard">
+          <span class="keyboard_msg">0号代表10号</span>
           <ul>
-            <li v-for="(item,index) in images" :key="`${index}`" style="float:left">
-              <img :src="item.src">
+            <li v-for="(item1,index) in images_1" :key="`${index}`" style="float:left">
+              <img :src="item1.src" class="keyboard_img">
+            </li>
+            <li v-for="(item2,index) in images_2" :key="`${index}`" style="float:left">
+              <img :src="item2.src" class="keyboard_img">
+            </li>
+            <li v-for="(item3,index) in images_3" :key="`${index}`" style="float:left">
+              <img :src="item3.src" class="keyboard_img">
             </li>
           </ul>
         </div>
         <div class="touzhuzuhe">
-          <div class="touzhu_1"></div>
-          <div class="touzhu_2"></div>
-          <div class="touzhu_3"></div>
+          <div class="touzhu_1">
+            <img class="touzhu_img1" src="../../assets/first.png">
+            <span>5</span>
+          </div>
+          <div class="touzhu_2">
+            <img src="../../assets/second.png">
+            <span>2</span>
+          </div>
+          <div class="touzhu_3">
+            <img src="../../assets/third.png">
+            <span>6</span>
+          </div>
         </div>
         <div style="
           float: left;
@@ -112,6 +127,7 @@
         <div class="touzhuzhibo">
           <span style="color:#fff">投注直播</span>
           <el-table
+            class="zhiboTable"
             :data="tableData"
             style="width: 100%;margin-top:30px;"
             max-height="250"
@@ -171,17 +187,42 @@ export default {
         }
       ],
       tableData1: [],
-      images:[
-        {src:'../../assets/k1.png'},
-        {src:'../../assets/k2.png'},
-        {src:'../../assets/k3.png'},
-        {src:'../../assets/k4.png'},
-        {src:'../../assets/k5.png'},
-        {src:'../../assets/k6.png'},
-        {src:'../../assets/k7.png'},
-        {src:'../../assets/k8.png'},
-        {src:'../../assets/k9.png'},
-        {src:'../../assets/k0.png'},]
+      images_1:[
+        {index:1,src:require('../../assets/k1.png')},
+        {index:2,src:require('../../assets/k2.png')},
+        {index:3,src:require('../../assets/k3.png')},
+        {index:4,src:require('../../assets/k4.png')},
+        {index:5,src:require('../../assets/k5.png')},
+        {index:6,src:require('../../assets/k6.png')},
+        {index:7,src:require('../../assets/k7.png')},
+        {index:8,src:require('../../assets/k8.png')},
+        {index:9,src:require('../../assets/k9.png')},
+        {index:0,src:require('../../assets/k0.png')}
+      ],
+      images_2:[
+        {index:11,src:require('../../assets/k1.png')},
+        {index:12,src:require('../../assets/k2.png')},
+        {index:13,src:require('../../assets/k3.png')},
+        {index:14,src:require('../../assets/k4.png')},
+        {index:15,src:require('../../assets/k5.png')},
+        {index:16,src:require('../../assets/k6.png')},
+        {index:17,src:require('../../assets/k7.png')},
+        {index:18,src:require('../../assets/k8.png')},
+        {index:19,src:require('../../assets/k9.png')},
+        {index:20,src:require('../../assets/k0.png')}
+      ],
+      images_3:[
+        {index:21,src:require('../../assets/k1.png')},
+        {index:22,src:require('../../assets/k2.png')},
+        {index:23,src:require('../../assets/k3.png')},
+        {index:24,src:require('../../assets/k4.png')},
+        {index:25,src:require('../../assets/k5.png')},
+        {index:26,src:require('../../assets/k6.png')},
+        {index:27,src:require('../../assets/k7.png')},
+        {index:28,src:require('../../assets/k8.png')},
+        {index:29,src:require('../../assets/k9.png')},
+        {index:30,src:require('../../assets/k0.png')}
+      ]
     };
   },
   methods: {

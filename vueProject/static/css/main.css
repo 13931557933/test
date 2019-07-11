@@ -166,7 +166,7 @@ el-table {
 .el-table td {
   padding: 2px 0;
   border-bottom: none !important;
-  text-alig2n: center;
+  text-align: center;
 }
 
 .el-table::before {
@@ -206,7 +206,7 @@ el-table {
   margin: 0 auto;
 }
 
-.keys_msg {
+.keyboard_msg {
   width: 88px;
   height: 15px;
   font-family: SimHei;
@@ -317,7 +317,7 @@ el-table {
   opacity: 0.5;
 }
 
-.keys {
+.keyboard {
   float: left;
   width: 51%;
   height: 250px;
@@ -327,13 +327,22 @@ el-table {
   margin-top: 10px;
 }
 
+.keyboard_img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 45px;
+  height: 45px;
+  /* background-color: #3ed6f4; */
+  opacity: 0.8;
+}
+
 .touzhuzuhe {
   float: left;
   width: 20%;
   margin-left: 20px;
 }
 
-.touzhuzuhe :first-child {
+.touzhuzuhe div:first-child {
   width: 100%;
   height: 52px;
   background-color: #1c2023;
@@ -341,9 +350,11 @@ el-table {
   opacity: 0.6;
   margin-top: 10px;
   /* margin-left: 28px; */
+  text-align: center;
+  color: #fff;
 }
 
-.touzhuzuhe :nth-child(2) {
+.touzhuzuhe div:nth-child(2) {
   width: 100%;
   height: 52px;
   background-color: #1c2023;
@@ -351,9 +362,11 @@ el-table {
   opacity: 0.6;
   margin-top: 48px;
   /* margin-left: 28px; */
+  text-align: center;
+  color: #fff;
 }
 
-.touzhuzuhe :nth-child(3) {
+.touzhuzuhe div:nth-child(3) {
   width: 100%;
   height: 52px;
   background-color: #1c2023;
@@ -361,6 +374,83 @@ el-table {
   opacity: 0.6;
   margin-top: 48px;
   /* margin-left: 28px; */
+  text-align: center;
+  color: #fff;
+}
+
+.touzhu_1 img {
+  width: 53px;
+  height: 35px;
+  font-family: HYk2gj;
+  font-size: 51px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 72px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.touzhu_1 span {
+  width: 98px;
+  height: 22px;
+  background-color: #16181a;
+  line-height: 60px;
+  border: 1px solid;
+  padding: 2px 40px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 10px;
+}
+
+.touzhu_2 img {
+  width: 63px;
+  height: 29px;
+  font-family: HYk2gj;
+  font-size: 41px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 72px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.touzhu_2 span {
+  width: 98px;
+  height: 22px;
+  background-color: #16181a;
+  line-height: 60px;
+  border: 1px solid;
+  padding: 2px 40px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 5px;
+}
+
+.touzhu_3 img {
+  width: 59px;
+  height: 27px;
+  font-family: HYk2gj;
+  font-size: 39px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 72px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.touzhu_3 span {
+  width: 98px;
+  height: 22px;
+  background-color: #16181a;
+  line-height: 60px;
+  border: 1px solid;
+  padding: 2px 40px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 5px;
 }
 
 .touzhujine {
@@ -401,6 +491,10 @@ el-table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 24px 23px;
+}
+
+.zhiboTable tr td:nth-child(2) .cell {
+  background: #000000;
 }
 
 .zu3 {
