@@ -43,18 +43,19 @@
             <div style="
               overflow: hidden;
               width: 100%;
-              height: calc(100% - 20px);">
+              height: calc(100% - 20px);
+              position: relative;">
               <div class="second">
-                <img src="../../assets/3.png" />
-                <img style="width: 90%;" src="../../assets/2nd.png" />
+                <img class="img_num" src="../../assets/3.png" />
+                <img class="img_bom" src="../../assets/2nd.png" />
               </div>
               <div class="first">
-                <img src="../../assets/4.png" />
-                <img style="width: 90%;" src="../../assets/1st.png" />
+                <img class="img_num" src="../../assets/4.png" />
+                <img class="img_bom" src="../../assets/1st.png" />
               </div>
               <div class="third">
-                <img src="../../assets/1.png" />
-                <img style="width: 90%;" src="../../assets/3rd.png" />
+                <img class="img_num" src="../../assets/1.png" />
+                <img class="img_bom" src="../../assets/3rd.png" />
               </div>
             </div>
           </div>
@@ -88,15 +89,15 @@
         <div>
           <div class="keyboard">
           <span class="keyboard_msg">0号代表10号</span>
-          <ul>
-            <li v-for="(item1,index) in images_1" :key="`${index}`" style="float:left">
-              <img :src="item1.src" class="keyboard_img">
+          <ul style="padding-left: 0;text-align: center;">
+            <li>
+              <img :src="item1.src" class="keyboard_img" v-for="(item1,index) in images_1" :key="`${index}`">
             </li>
-            <li v-for="(item2,index) in images_2" :key="`${index}`" style="float:left">
-              <img :src="item2.src" class="keyboard_img">
+            <li>
+              <img :src="item2.src" class="keyboard_img"  v-for="(item2,index) in images_2" :key="`${index}`">
             </li>
-            <li v-for="(item3,index) in images_3" :key="`${index}`" style="float:left">
-              <img :src="item3.src" class="keyboard_img">
+            <li>
+              <img :src="item3.src" class="keyboard_img" v-for="(item3,index) in images_3" :key="`${index}`">
             </li>
           </ul>
         </div>
