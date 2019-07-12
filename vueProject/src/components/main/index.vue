@@ -4,7 +4,7 @@
       <img src="../../assets/logo_02.gif" />
       <div class="youxijieshao">游戏介绍</div>
       <!-- <span class="youxijieshao">游戏介绍</span> -->
-      <el-button class="login">登录</el-button>
+      <el-button class="login">scatter登录</el-button>
       <el-dropdown class="drop" @command="menuTab">
         <span class="el-dropdown-link">
           {{language}}
