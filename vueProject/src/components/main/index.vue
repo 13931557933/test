@@ -40,11 +40,13 @@
           </div>
           <div class="zhankuang">
             <span>战况</span>
-            <div style="
+            <div
+              style="
               overflow: hidden;
               width: 100%;
               height: calc(100% - 20px);
-              position: relative;">
+              position: relative;"
+            >
               <div class="second">
                 <img class="img_num" src="../../assets/3.png" />
                 <img class="img_bom" src="../../assets/2nd.png" />
@@ -88,40 +90,78 @@
         </div>
         <div>
           <div class="keyboard">
-          <span class="keyboard_msg">0号代表10号</span>
-          <ul style="padding-left: 0;text-align: center;">
-            <li>
-              <img :src="item1.src" class="keyboard_img" v-for="(item1,index) in images_1" :key="`${index}`">
-            </li>
-            <li>
-              <img :src="item2.src" class="keyboard_img"  v-for="(item2,index) in images_2" :key="`${index}`">
-            </li>
-            <li>
-              <img :src="item3.src" class="keyboard_img" v-for="(item3,index) in images_3" :key="`${index}`">
-            </li>
-          </ul>
-        </div>
-        <div class="touzhuzuhe">
-          <div class="touzhu_1">
-            <img class="touzhu_img1" src="../../assets/first.png">
-            <span>5</span>
+            <span class="keyboard_msg">0号代表10号</span>
+            <ul style="padding-left: 0;text-align: center;">
+              <li>
+                <img
+                  :src="item1.src"
+                  class="keyboard_img"
+                  v-for="(item1,index) in images_1"
+                  :key="`${index}`"
+                />
+              </li>
+              <li>
+                <img
+                  :src="item2.src"
+                  class="keyboard_img"
+                  v-for="(item2,index) in images_2"
+                  :key="`${index}`"
+                />
+              </li>
+              <li>
+                <img
+                  :src="item3.src"
+                  class="keyboard_img"
+                  v-for="(item3,index) in images_3"
+                  :key="`${index}`"
+                />
+              </li>
+            </ul>
           </div>
-          <div class="touzhu_2">
-            <img src="../../assets/second.png">
-            <span>2</span>
+          <div class="touzhuzuhe">
+            <div class="touzhu_1">
+              <img class="touzhu_img1" src="../../assets/first.png" />
+              <span>5</span>
+            </div>
+            <div class="touzhu_2">
+              <img src="../../assets/second.png" />
+              <span>2</span>
+            </div>
+            <div class="touzhu_3">
+              <img src="../../assets/third.png" />
+              <span>6</span>
+            </div>
           </div>
-          <div class="touzhu_3">
-            <img src="../../assets/third.png">
-            <span>6</span>
-          </div>
-        </div>
-        <div style="
+          <div style="
           float: left;
           width: 22%;
           margin-left: 20px;">
-          <div class="touzhujine"></div>
-          <el-button class="btnTouZhu">投注</el-button>
-        </div>
+            <div class="touzhujine">
+              <div>
+                <div class="qihao_div">
+                  <span class="qihao">期号</span>
+                  <span>12</span>
+                </div>
+                <img class="img_clock" src="../../assets/clock.png" />
+                <span class="txt_clock">02:30</span>
+              </div>
+              <div style="margin-top: 5%;">
+                <span class="txt_touzhujine">投注金额</span>
+              </div>
+              <div class="touzhujine_div">
+                <div class="touzhujine_div_1"><span>0</span></div>
+                <div class="touzhujine_div_2"><span>1/2</span></div>
+                <div class="touzhujine_div_3"><span>2X</span></div>
+              </div>
+              <div class="touzhujine_bottom">
+                <span>当前注数</span>
+                <span>1</span>
+                <span>总金额</span>
+                <span>0</span>
+              </div>
+            </div>
+            <el-button class="btnTouZhu">投注</el-button>
+          </div>
         </div>
       </div>
       <div class="bottom">
@@ -188,41 +228,41 @@ export default {
         }
       ],
       tableData1: [],
-      images_1:[
-        {index:1,src:require('../../assets/k1.png')},
-        {index:2,src:require('../../assets/k2.png')},
-        {index:3,src:require('../../assets/k3.png')},
-        {index:4,src:require('../../assets/k4.png')},
-        {index:5,src:require('../../assets/k5.png')},
-        {index:6,src:require('../../assets/k6.png')},
-        {index:7,src:require('../../assets/k7.png')},
-        {index:8,src:require('../../assets/k8.png')},
-        {index:9,src:require('../../assets/k9.png')},
-        {index:0,src:require('../../assets/k0.png')}
+      images_1: [
+        { index: 1, src: require("../../assets/k1.png") },
+        { index: 2, src: require("../../assets/k2.png") },
+        { index: 3, src: require("../../assets/k3.png") },
+        { index: 4, src: require("../../assets/k4.png") },
+        { index: 5, src: require("../../assets/k5.png") },
+        { index: 6, src: require("../../assets/k6.png") },
+        { index: 7, src: require("../../assets/k7.png") },
+        { index: 8, src: require("../../assets/k8.png") },
+        { index: 9, src: require("../../assets/k9.png") },
+        { index: 0, src: require("../../assets/k0.png") }
       ],
-      images_2:[
-        {index:11,src:require('../../assets/k1.png')},
-        {index:12,src:require('../../assets/k2.png')},
-        {index:13,src:require('../../assets/k3.png')},
-        {index:14,src:require('../../assets/k4.png')},
-        {index:15,src:require('../../assets/k5.png')},
-        {index:16,src:require('../../assets/k6.png')},
-        {index:17,src:require('../../assets/k7.png')},
-        {index:18,src:require('../../assets/k8.png')},
-        {index:19,src:require('../../assets/k9.png')},
-        {index:20,src:require('../../assets/k0.png')}
+      images_2: [
+        { index: 11, src: require("../../assets/k1.png") },
+        { index: 12, src: require("../../assets/k2.png") },
+        { index: 13, src: require("../../assets/k3.png") },
+        { index: 14, src: require("../../assets/k4.png") },
+        { index: 15, src: require("../../assets/k5.png") },
+        { index: 16, src: require("../../assets/k6.png") },
+        { index: 17, src: require("../../assets/k7.png") },
+        { index: 18, src: require("../../assets/k8.png") },
+        { index: 19, src: require("../../assets/k9.png") },
+        { index: 20, src: require("../../assets/k0.png") }
       ],
-      images_3:[
-        {index:21,src:require('../../assets/k1.png')},
-        {index:22,src:require('../../assets/k2.png')},
-        {index:23,src:require('../../assets/k3.png')},
-        {index:24,src:require('../../assets/k4.png')},
-        {index:25,src:require('../../assets/k5.png')},
-        {index:26,src:require('../../assets/k6.png')},
-        {index:27,src:require('../../assets/k7.png')},
-        {index:28,src:require('../../assets/k8.png')},
-        {index:29,src:require('../../assets/k9.png')},
-        {index:30,src:require('../../assets/k0.png')}
+      images_3: [
+        { index: 21, src: require("../../assets/k1.png") },
+        { index: 22, src: require("../../assets/k2.png") },
+        { index: 23, src: require("../../assets/k3.png") },
+        { index: 24, src: require("../../assets/k4.png") },
+        { index: 25, src: require("../../assets/k5.png") },
+        { index: 26, src: require("../../assets/k6.png") },
+        { index: 27, src: require("../../assets/k7.png") },
+        { index: 28, src: require("../../assets/k8.png") },
+        { index: 29, src: require("../../assets/k9.png") },
+        { index: 30, src: require("../../assets/k0.png") }
       ]
     };
   },
