@@ -94,25 +94,25 @@
             <ul style="padding-left: 0;text-align: center;">
               <li>
                 <img
-                  :src="item1.src"
+                  :src="item.src"
                   class="keyboard_img"
-                  v-for="(item1,index) in images_1"
+                  v-for="(item,index) in images"
                   :key="`${index}`"
                 />
               </li>
               <li>
                 <img
-                  :src="item2.src"
+                  :src="item.src"
                   class="keyboard_img"
-                  v-for="(item2,index) in images_2"
+                  v-for="(item,index) in images"
                   :key="`${index}`"
                 />
               </li>
               <li>
                 <img
-                  :src="item3.src"
+                  :src="item.src"
                   class="keyboard_img"
-                  v-for="(item3,index) in images_3"
+                  v-for="(item,index) in images"
                   :key="`${index}`"
                 />
               </li>
@@ -123,10 +123,12 @@
               <img class="touzhu_img1" src="../../assets/first.png" />
               <span>5</span>
             </div>
+            <div>/</div>
             <div class="touzhu_2">
               <img src="../../assets/second.png" />
               <span>2</span>
             </div>
+            <div>/</div>
             <div class="touzhu_3">
               <img src="../../assets/third.png" />
               <span>6</span>
@@ -228,7 +230,7 @@ export default {
         }
       ],
       tableData1: [],
-      images_1: [
+      images: [
         { index: 1, src: require("../../assets/k1.png") },
         { index: 2, src: require("../../assets/k2.png") },
         { index: 3, src: require("../../assets/k3.png") },
@@ -240,30 +242,7 @@ export default {
         { index: 9, src: require("../../assets/k9.png") },
         { index: 0, src: require("../../assets/k0.png") }
       ],
-      images_2: [
-        { index: 11, src: require("../../assets/k1.png") },
-        { index: 12, src: require("../../assets/k2.png") },
-        { index: 13, src: require("../../assets/k3.png") },
-        { index: 14, src: require("../../assets/k4.png") },
-        { index: 15, src: require("../../assets/k5.png") },
-        { index: 16, src: require("../../assets/k6.png") },
-        { index: 17, src: require("../../assets/k7.png") },
-        { index: 18, src: require("../../assets/k8.png") },
-        { index: 19, src: require("../../assets/k9.png") },
-        { index: 20, src: require("../../assets/k0.png") }
-      ],
-      images_3: [
-        { index: 21, src: require("../../assets/k1.png") },
-        { index: 22, src: require("../../assets/k2.png") },
-        { index: 23, src: require("../../assets/k3.png") },
-        { index: 24, src: require("../../assets/k4.png") },
-        { index: 25, src: require("../../assets/k5.png") },
-        { index: 26, src: require("../../assets/k6.png") },
-        { index: 27, src: require("../../assets/k7.png") },
-        { index: 28, src: require("../../assets/k8.png") },
-        { index: 29, src: require("../../assets/k9.png") },
-        { index: 30, src: require("../../assets/k0.png") }
-      ]
+      
     };
   },
   methods: {
