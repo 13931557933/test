@@ -336,6 +336,10 @@
   margin-top: 10px;
 }
 
+.keyboard ul li{
+  list-style: none;
+}
+
 .keyboard_img {
   margin-right: 10px;
   margin-bottom: 10px;
