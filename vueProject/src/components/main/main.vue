@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <img src="../../assets/logo_02.gif" />
+      <img src="../../assets/logo.png" />
       <div class="youxijieshao">游戏介绍</div>
       <!-- <span class="youxijieshao">游戏介绍</span> -->
       <el-button class="login">scatter登录</el-button>

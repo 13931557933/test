@@ -19,14 +19,4 @@ export default new Router({
     }
   ]
 })
-// export default {
-//   name: "HelloWorld",
-//   path: "/",
-//   component: HelloWorld,
-//   // redirect:{
-//   //   name:'HelloWorld'
-//   // },
-//   subRoutes: [
-//     main,
-//   ]
-// };
+
