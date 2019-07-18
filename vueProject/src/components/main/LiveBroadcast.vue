@@ -13,15 +13,47 @@
 </template>
 
 <script>
+import socket from '../../socket'
+import {formatDate} from '../../assets/common'
 export default {
   name: "LiveBroadcast",
   data: () => ({
-    data: []
+    data:[]
   }),
-  mounted() {},
+  mounted() {
+    socket.addEventListener('message', ev => {
+      let message = ev.data.split('\n')
+      message.forEach(x => {
+        let data = JSON.parse(x)[0]
+        switch (data.type) {
+          case 2:
+            this.data.unshift({
+              type: '-',
+              issue: data.data.periods,
+              name: data.data.from,
+              money: data.data.quantity,
+              time: data.data.times
+            })
+            this.data.splice(6, this.data.length)
+            break
+          case 1:
+            this.data.unshift({
+              type: '+',
+              issue: data.data.periods,
+              name: data.data.to,
+              money: data.data.quantity,
+              time: data.data.times
+            })
+            this.data.splice(6, this.data.length)
+            break
+        }
+      })
+    })
+  },
   methods: {
-    formatDate() {}
-  }
+    formatDate (time) {
+      return formatDate(time)
+    }}
 };
 </script>
 
